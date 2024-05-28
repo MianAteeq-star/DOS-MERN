@@ -79,7 +79,7 @@ export const loginController = async (req, res) => {
 
 export const userDataController = async (req, res) => {
   try {
-    const user = await userModel.findOne({ _id: req.body._id });
+    const user = await userModel.findOne({ _id: req.body.userId });
     if (!user) {
       return res.status(400).send({
         success: false,
